@@ -1,0 +1,135 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww28600\viewh14900\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Online Pilot</title>\
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">\
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=SF+Pro+Display:wght@400;500;600;700;900&display=swap" rel="stylesheet">\
+    <link rel="stylesheet" href="style.css">\
+</head>\
+<body>\
+    <h1>Online Pilot</h1>\
+    <nav>\
+        <button id="toApp" title="Home">\
+            <svg viewBox="0 0 24 24">\
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>\
+            </svg>\
+        </button>\
+        <button id="toAdmin" title="Admin Panel">\
+            <svg viewBox="0 0 24 24">\
+                <path d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>\
+            </svg>\
+        </button>\
+    </nav>\
+\
+    <!-- App Section -->\
+    <div id="appSection" class="section active">\
+        <div id="userSelection">\
+            <div id="routeButtons">\
+                <h3>Select a Route</h3>\
+                <button data-route="wonderful_waterfalls"><span>Wonderful Waterfalls</span></button>\
+                <button data-route="quicksand_triangle"><span>Quicksand Triangle</span></button>\
+                <button data-route="figure_8"><span>The Figure 8</span></button>\
+                <button data-route="volcano"><span>The Volcano</span></button>\
+                <button data-route="trifecta"><span>Trifecta</span></button>\
+            </div>\
+            <div id="languageButtons">\
+                <h3>Select a Language</h3>\
+                <button data-lang="en">\
+                    <span class="greeting">Hi</span>\
+                    <span>English</span>\
+                </button>\
+                <button data-lang="es">\
+                    <span class="greeting">Hola</span>\
+                    <span>Spanish</span>\
+                </button>\
+                <button data-lang="ja">\
+                    <span class="greeting">\uc0\u12371 \u12435 \u12395 \u12385 \u12399 </span>\
+                    <span>Japanese</span>\
+                </button>\
+                <button data-lang="uk">\
+                    <span class="greeting">\uc0\u1087 \u1088 \u1080 \u1074 \u1110 \u1090 </span>\
+                    <span>Ukrainian</span>\
+                </button>\
+                <button data-lang="ru">\
+                    <span class="greeting">\uc0\u1055 \u1088 \u1080 \u1074 \u1077 \u1090 </span>\
+                    <span>Russian</span>\
+                </button>\
+                <button data-lang="zh">\
+                    <span class="greeting">\uc0\u20320 \u22909 </span>\
+                    <span>Chinese (Simplified)</span>\
+                </button>\
+                <button data-lang="hi">\
+                    <span class="greeting">\uc0\u2344 \u2350 \u2360 \u2381 \u2340 \u2375 </span>\
+                    <span>Hindi</span>\
+                </button>\
+                <button data-lang="ar">\
+                    <span class="greeting">\uc0\u1571 \u1607 \u1604 \u1575 \u1611 </span>\
+                    <span>Arabic</span>\
+                </button>\
+            </div>\
+            <div class="button-row">\
+                <button id="backButton" title="Back">\
+                    <svg viewBox="0 0 24 24">\
+                        <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>\
+                    </svg>\
+                </button>\
+                <button id="startTour" title="Start Tour" disabled>\
+                    <svg viewBox="0 0 24 24">\
+                        <path d="M8 5v14l11-7z"/>\
+                    </svg>\
+                </button>\
+            </div>\
+        </div>\
+        <audio id="audioPlayer" controls></audio>\
+    </div>\
+\
+    <!-- Admin Panel Section -->\
+    <div id="adminSection" class="section">\
+        <div id="adminPanel">\
+            <h2>Admin Panel</h2>\
+            <div>\
+                <label>Select Route to Manage:</label>\
+                <select id="adminRouteSelect">\
+                    <option value="">Select Route</option>\
+                    <option value="wonderful_waterfalls">Wonderful Waterfalls</option>\
+                    <option value="quicksand_triangle">Quicksand Triangle</option>\
+                    <option value="figure_8">The Figure 8</option>\
+                    <option value="volcano">The Volcano</option>\
+                    <option value="trifecta">Trifecta</option>\
+                </select>\
+            </div>\
+            <div>\
+                <label>Select Language:</label>\
+                <select id="adminLanguageSelect" disabled>\
+                    <option value="">Select Language</option>\
+                    <option value="en">English</option>\
+                    <option value="es">Spanish</option>\
+                    <option value="ja">Japanese</option>\
+                    <option value="uk">Ukrainian</option>\
+                    <option value="ru">Russian</option>\
+                    <option value="zh">Chinese (Simplified)</option>\
+                    <option value="hi">Hindi</option>\
+                    <option value="ar">Arabic</option>\
+                </select>\
+            </div>\
+            <button id="addIntroAudio">Add/Update Intro Audio</button>\
+            <input type="file" id="introAudioFile" accept="audio/*" style="display: none;">\
+            <button id="addPoi">Add Point of Interest</button>\
+            <div id="poiList"></div>\
+            <button id="saveChanges">Save Changes</button>\
+        </div>\
+    </div>\
+\
+    <script src="script.js"></script>\
+    <script src="admin.js"></script>\
+</body>\
+</html>}
